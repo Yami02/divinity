@@ -116,57 +116,55 @@
         <div class="panel" style="overflow-y:auto; max-height:85vh">
             <div class="panel-title">Estatísticas Brutas</div>
             
-            <div class="input-row"><label style="font-size:1rem; color:var(--gold)">Nível</label><input type="number" id="gLv" value="20" oninput="calc()" style="font-weight:bold; font-size:1.1rem; color:var(--gold)"></div>
+            <div class="input-row"><label style="font-size:1rem; color:var(--gold)">Nível</label><input type="number" id="gLv" value="20" oninput="app.calc()" style="font-weight:bold; font-size:1.1rem; color:var(--gold)"></div>
             
             <div class="section-split"></div>
             <div style="color:var(--gold-dim); font-size:0.75rem; margin-bottom:8px; text-transform:uppercase; font-weight:bold">Atributos Primários</div>
-            <div class="input-row"><label>Força</label><input type="number" id="gStr" value="10" oninput="calc()"></div>
-            <div class="input-row"><label>Finesse</label><input type="number" id="gFin" value="10" oninput="calc()"></div>
-            <div class="input-row"><label>Inteligência</label><input type="number" id="gInt" value="40" oninput="calc()"></div>
+            <div class="input-row"><label>Força</label><input type="number" id="gStr" value="10" oninput="app.calc()"></div>
+            <div class="input-row"><label>Finesse</label><input type="number" id="gFin" value="10" oninput="app.calc()"></div>
+            <div class="input-row"><label>Inteligência</label><input type="number" id="gInt" value="40" oninput="app.calc()"></div>
 
             <div class="section-split"></div>
             <div style="color:var(--gold-dim); font-size:0.75rem; margin-bottom:8px; text-transform:uppercase; font-weight:bold">Escolas e Habilidades (<span style="color:white;font-size:0.7rem">1 ponto = +5%</span>)</div>
-            <div class="input-row"><label>Warfare (Físico Multiplicativo)</label><input type="number" id="gWarfare" value="10" oninput="calc()"></div>
-            <div class="input-row"><label>Pyrokinetic (Fogo)</label><input type="number" id="gPyro" value="0" oninput="calc()"></div>
-            <div class="input-row"><label>Geomancer (Terra/Veneno)</label><input type="number" id="gGeo" value="0" oninput="calc()"></div>
-            <div class="input-row"><label>Hydrosophist (Água)</label><input type="number" id="gHydro" value="0" oninput="calc()"></div>
-            <div class="input-row"><label>Aerotheurge (Ar)</label><input type="number" id="gAero" value="0" oninput="calc()"></div>
-            <div class="input-row"><label>Summoning (P/ Invocações)</label><input type="number" id="gSummon" value="0" oninput="calc()"></div>
-            <div class="input-row"><label>Scoundrel (Crítico Multiplicador)</label><input type="number" id="gScndrl" value="0" oninput="calc()"></div>
-            <div class="input-row"><label>Huntsman (Vantagem p/ Altura)</label><input type="number" id="gHunts" value="0" oninput="calc()"></div>
+            <div class="input-row"><label>Warfare (Físico Multiplicativo)</label><input type="number" id="gWarfare" value="10" oninput="app.calc()"></div>
+            <div class="input-row"><label>Pyrokinetic (Fogo)</label><input type="number" id="gPyro" value="0" oninput="app.calc()"></div>
+            <div class="input-row"><label>Geomancer (Terra/Veneno)</label><input type="number" id="gGeo" value="0" oninput="app.calc()"></div>
+            <div class="input-row"><label>Hydrosophist (Água)</label><input type="number" id="gHydro" value="0" oninput="app.calc()"></div>
+            <div class="input-row"><label>Aerotheurge (Ar)</label><input type="number" id="gAero" value="0" oninput="app.calc()"></div>
+            <div class="input-row"><label>Summoning (P/ Invocações)</label><input type="number" id="gSummon" value="0" oninput="app.calc()"></div>
+            <div class="input-row"><label>Scoundrel (Crítico Multiplicador)</label><input type="number" id="gScndrl" value="0" oninput="app.calc()"></div>
+            <div class="input-row"><label>Huntsman (Vantagem p/ Altura)</label><input type="number" id="gHunts" value="0" oninput="app.calc()"></div>
             
             <div class="input-row" style="margin-top:12px; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.05); padding:8px; border-radius:6px">
                 <label>Perícia Aditiva da Arma <br><span style="font-size:0.7rem; color:#aaa; font-weight:normal">(2H, Dual Wield, 1H, Ranged)</span></label>
-                <input type="number" id="gWep" value="0" oninput="calc()">
+                <input type="number" id="gWep" value="0" oninput="app.calc()">
             </div>
 
             <div class="section-split"></div>
             <div style="color:var(--gold-dim); font-size:0.75rem; margin-bottom:8px; text-transform:uppercase; font-weight:bold">Talentos, Misc e Buffs Globais</div>
             
-            <div class="input-row"><label>Chance Crítico Base (%)</label><input type="number" id="gCritBase" value="20" oninput="calc()"></div>
-            <div class="input-row"><label>Buffs Globais (+% Aditivo)</label><input type="number" id="gBuffs" value="0" oninput="calc()" title="Buffs aditivos como Thick of the Fight, Potion buffs."></div>
+            <div class="input-row"><label>Chance Crítico Base (%)</label><input type="number" id="gCritBase" value="20" oninput="app.calc()"></div>
+            <div class="input-row"><label>Buffs Globais (+% Aditivo)</label><input type="number" id="gBuffs" value="0" oninput="app.calc()" title="Buffs aditivos como Thick of the Fight, Potion buffs."></div>
 
             <div style="margin-top:15px; margin-bottom:10px; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.05); padding:10px; border-radius:6px">
                 <label style="font-size:0.85rem; font-weight:bold; color:white; display:flex; justify-content:space-between">
                     Death Wish (Aditivo) <span id="lblDw" style="color:var(--red-glow);">0%</span>
                 </label>
-                <input type="range" id="gDW" value="0" min="0" max="99" oninput="document.getElementById('lblDw').innerText=this.value+'%'; calc()" style="margin-top:8px">
+                <input type="range" id="gDW" value="0" min="0" max="99" oninput="document.getElementById('lblDw').innerText=this.value+'%'; app.calc()" style="margin-top:8px">
             </div>
 
-            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Hothead:</strong> +10% Crit</div><label class="switch"><input type="checkbox" id="tHot" onchange="calc()"><span class="slider"></span></label></div>
-            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Guerrilla:</strong> +40% (Aditivo Misc)</div><label class="switch"><input type="checkbox" id="tGue" onchange="calc()"><span class="slider"></span></label></div>
-            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Humano:</strong> Engenhoso (+5% Cri)</div><label class="switch"><input type="checkbox" id="tHum" onchange="calc()"><span class="slider"></span></label></div>
-            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Elfo:</strong> Sacrifício Carne (+10%)</div><label class="switch"><input type="checkbox" id="tElf" onchange="calc()"><span class="slider"></span></label></div>
-            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Magia Selvagem:</strong> Habilita Magia Crit</div><label class="switch"><input type="checkbox" id="tSbg" checked onchange="calc()"><span class="slider"></span></label></div>
-            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Vantagem de Terreno</strong> (Huntsman)</div><label class="switch"><input type="checkbox" id="tHg" onchange="calc()"><span class="slider"></span></label></div>
+            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Hothead:</strong> +10% Crit</div><label class="switch"><input type="checkbox" id="tHot" onchange="app.calc()"><span class="slider"></span></label></div>
+            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Guerrilla:</strong> +40% (Aditivo Misc)</div><label class="switch"><input type="checkbox" id="tGue" onchange="app.calc()"><span class="slider"></span></label></div>
+            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Humano:</strong> Engenhoso (+5% Cri)</div><label class="switch"><input type="checkbox" id="tHum" onchange="app.calc()"><span class="slider"></span></label></div>
+            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Elfo:</strong> Sacrifício Carne (+10%)</div><label class="switch"><input type="checkbox" id="tElf" onchange="app.calc()"><span class="slider"></span></label></div>
+            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Magia Selvagem:</strong> Habilita Magia Crit</div><label class="switch"><input type="checkbox" id="tSbg" checked onchange="app.calc()"><span class="slider"></span></label></div>
+            <div class="toggle-row"><div style="font-size:0.8rem"><strong>Vantagem de Terreno</strong> (Huntsman)</div><label class="switch"><input type="checkbox" id="tHg" onchange="app.calc()"><span class="slider"></span></label></div>
         </div>
 
         <!-- PAINEL 2: MONTADOR DO COMBO -->
         <div>
-            <button class="btn-add" style="margin-bottom: 25px; padding: 15px;" onclick="openWikiModal()">✠ Inserir Habilidade no Turno (Buscador Wiki)</button>
-            <div class="combo-board" id="board">
-                <!-- Javascript -->
-            </div>
+            <button class="btn-add" style="margin-bottom: 25px; padding: 15px;" id="btnBuscador">✠ Inserir Habilidade no Turno (Buscador Wiki)</button>
+            <div class="combo-board" id="board"></div>
         </div>
 
         <!-- PAINEL 3: DANO TOTAL -->
@@ -190,7 +188,6 @@
                     </div>
                 </div>
 
-                <!-- Detalhamento de Composição -->
                 <div class="res-box" style="background: rgba(10, 12, 15, 0.8); border: 1px dashed rgba(212, 175, 55, 0.3); text-align: left; padding: 15px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" id="resComposicao">
                     Aguardando montagem do Combo...
                 </div>
@@ -204,12 +201,12 @@
         <div class="modal-content">
             <h3>Buscador da Wiki DOS2</h3>
             <div style="display:flex; flex-direction:column; gap:15px; margin-bottom:20px">
-                <select id="selSchool" style="padding:10px" onchange="populateSkills()"></select>
+                <select id="selSchool" style="padding:10px"></select>
                 <select id="selSkill" style="padding:10px"><option value="" disabled selected>Escolha a Habilidade</option></select>
             </div>
             <div style="display:flex; gap:10px">
-                <button class="btn-add" style="background:rgba(255,255,255,0.1); color:white; border:1px solid rgba(255,255,255,0.2)" onclick="document.getElementById('wikiModal').style.display='none'">Abortar</button>
-                <button class="btn-add" onclick="pushSkillFromWiki()">Confirmar Golpe</button>
+                <button class="btn-add" style="background:rgba(255,255,255,0.1); color:white; border:1px solid rgba(255,255,255,0.2)" id="btnAbortarModal">Abortar</button>
+                <button class="btn-add" id="btnConfirmarModal">Confirmar Golpe</button>
             </div>
             <div id="wikiError" style="color:var(--red-glow); font-size:0.85rem; margin-top:10px; display:none; text-align:center">Escolha a Categoria e a Habilidade!</div>
         </div>
@@ -217,294 +214,380 @@
 
     <script src="banco_xml.js"></script>
     <script src="calculadora.js"></script>
+    
     <script>
-        const tabelaDanoBaseMagia = [0, 7, 9, 11, 13, 16, 19, 23, 27, 31, 36, 42, 49, 57, 66, 78, 93, 110, 139, 166, 199, 239, 289, 349, 423, 513];
+        const app = {
+            tabelaDanoBaseMagia: [0, 7, 9, 11, 13, 16, 19, 23, 27, 31, 36, 42, 49, 57, 66, 78, 93, 110, 139, 166, 199, 239, 289, 349, 423, 513],
+            skillsCombo: [],
+            nextSkId: 1,
 
-        let skillsCombo = [];
-        let nextSkId = 1;
+            initMath: function() {
+                try {
+                    let lvl = localStorage.getItem('dos2_lvl'); if(lvl) document.getElementById('gLv').value = lvl;
+                    let str = localStorage.getItem('dos2_str'); if(str) document.getElementById('gStr').value = str;
+                    let fin = localStorage.getItem('dos2_fin'); if(fin) document.getElementById('gFin').value = fin;
+                    let int = localStorage.getItem('dos2_int'); if(int) document.getElementById('gInt').value = int;
+                    let war = localStorage.getItem('dos2_war'); if(war) document.getElementById('gWarfare').value = war;
+                    let pyr = localStorage.getItem('dos2_pyr'); if(pyr) document.getElementById('gPyro').value = pyr;
+                    let geo = localStorage.getItem('dos2_geo'); if(geo) document.getElementById('gGeo').value = geo;
+                    let hyd = localStorage.getItem('dos2_hyd'); if(hyd) document.getElementById('gHydro').value = hyd;
+                    let aer = localStorage.getItem('dos2_aer'); if(aer) document.getElementById('gAero').value = aer;
+                    let sum = localStorage.getItem('dos2_sum'); if(sum) document.getElementById('gSummon').value = sum;
+                    let scn = localStorage.getItem('dos2_scn'); if(scn) document.getElementById('gScndrl').value = scn;
+                    let hnt = localStorage.getItem('dos2_hnt'); if(hnt) document.getElementById('gHunts').value = hnt;
+                    let wep = localStorage.getItem('dos2_wep'); if(wep) document.getElementById('gWep').value = wep;
 
-        function openWikiModal() {
-            let sel = document.getElementById('selSchool');
-            sel.innerHTML = '<option value="" disabled selected>Escolha a Categoria e Escola</option>';
-            for(let k in window.CentralComboList) {
-                if(window.CentralComboList[k].length > 0) sel.innerHTML += `<option value="${k}">${k}</option>`;
-            }
-            document.getElementById('selSkill').innerHTML = '<option value="" disabled selected>Escolha a Habilidade/Magia</option>';
-            document.getElementById('selSkill').value = "";
-            document.getElementById('wikiError').style.display = 'none';
-            document.getElementById('wikiModal').style.display='flex';
-        }
-        
-        function populateSkills() {
-            let sc = document.getElementById('selSchool').value;
-            let selSk = document.getElementById('selSkill');
-            selSk.innerHTML = '<option value="" disabled selected>Escolha a Habilidade/Magia</option>';
-            window.CentralComboList[sc].forEach((sk, i) => selSk.innerHTML += `<option value="${i}">${sk.name}</option>`);
-        }
-        
-        function pushSkillFromWiki() {
-            let sc = document.getElementById('selSchool').value;
-            let ki = document.getElementById('selSkill').value;
-            if(!sc || !ki) {
-                document.getElementById('wikiError').style.display = 'block';
-                return;
-            }
-            let s = window.CentralComboList[sc][ki];
-            skillsCombo.push({
-                id: nextSkId++, name: s.name, origin: s.origin, type: s.type, mult: s.mult,
-                active: true, ignoreAttr: s.ignoreAttr || false,
-                wMin: 50, wMax: 60, wAttr: s.attr || "Dinâmico", wCritM: 150, 
-                hasOffhand: false, offMin: 15, offMax: 20, attr: s.attr,
-                ap: s.ap
-            });
-            document.getElementById('wikiModal').style.display='none';
-            renderSkills(); 
-        }
-        function rmSkill(id) { 
-            skillsCombo = skillsCombo.filter(c => c.id !== id); 
-            renderSkills(); 
-        }
-
-        window.toggleMath = function(id) {
-            let dom = document.getElementById('math_'+id);
-            if(dom) dom.style.display = dom.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function renderSkills() {
-            let html = '';
-            let bObj = document.getElementById('board');
-            if(skillsCombo.length === 0) {
-                bObj.innerHTML = `<div class="empty-placeholder" id="skillEmpty">Sua Ordem dos Turnos de Combo está vazia. Exija habilidades na Wiki.</div>`;
-                calc();
-                return;
-            }
-            
-            skillsCombo.forEach(c => {
-                let tag = c.origin === 'Arma' ? 'Golpe c/ Arma Fx' : (c.origin === 'Aura' ? 'Aura Em Arma' : (c.origin==='Poly'?'Magia Polimorfia':'Encantamento Nativo'));
-                if(c.origin==='Summon') tag = 'Invocação/Summon';
-                if(c.ignoreAttr) tag = 'Magia Pura/Racial';
-
-                html += `
-                <div class="skill-card type-${c.origin.toLowerCase()} ${c.ignoreAttr ? 'type-racials' : ''} ${c.active ? '' : 'disabled'}" id="card_${c.id}">
-                    <div class="sc-header">
-                        <div class="sc-title">
-                            ${c.name} <span class="sc-tag">${tag}</span>
-                            <label class="switch" title="Ativar/Invisibilizar no cálculo" style="margin-left:10px; transform:scale(0.8)">
-                                <input type="checkbox" ${c.active?'checked':''} onchange="updateCard(${c.id}, 'active', this.checked)">
-                                <span class="slider"></span>
-                            </label>
-                        </div>
-                        <button class="btn-rm" onclick="rmSkill(${c.id})">Excluir</button>
-                    </div>
-
-                    ${c.active ? `
-                    <div class="sc-inputs">
-                        <div class="input-row" style="flex-direction:column; align-items:flex-start; width:100%; border:0; padding:0; background:none">
-                            <label style="width:100%">Multiplicador Extração (%)</label>
-                            <input style="width:100%" type="number" value="${c.mult}" oninput="updateCard(${c.id}, 'mult', this.value)">
-                        </div>
-                        <div class="input-row" style="flex-direction:column; align-items:flex-start; width:100%; border:0; padding:0; background:none">
-                            <label style="width:100%">Escola Processada</label>
-                            <select style="width:100%" onchange="updateCard(${c.id}, 'type', this.value)">
-                                <option value="Físico" ${c.type==='Físico'?'selected':''}>Físico</option>
-                                <option value="Fogo" ${c.type==='Fogo'?'selected':''}>Fogo</option>
-                                <option value="Água" ${c.type==='Água'?'selected':''}>Água</option>
-                                <option value="Terra" ${c.type==='Terra'?'selected':''}>Terra</option>
-                                <option value="Ar" ${c.type==='Ar'?'selected':''}>Ar</option>
-                                <option value="Veneno" ${c.type==='Veneno'?'selected':''}>Veneno</option>
-                                <option value="Perfurante" ${c.type==='Perfurante'?'selected':''}>Perfurante</option>
-                            </select>
-                        </div>
-                    </div>` : '<div style="color:#aaa; font-style:italic; margin-bottom:10px">Golpe silenciado logicamente.</div>'}
-
-                    ${(c.origin === 'Arma' && c.active) ? `
-                    <div class="sc-inputs" style="background:rgba(164, 42, 42, 0.1); border: 1px dashed var(--red)">
-                        <div style="grid-column: span 2; font-size: 0.8rem; color:var(--text-main); margin-bottom:-5px"><strong>Equipamento Instalado</strong></div>
-                        
-                        <div style="grid-column: span 2; display:flex; gap:10px">
-                            <div style="flex:1"><label style="font-size:0.75rem; color:#aaa">Arma Primária: Min ~ Max</label><div style="display:flex; gap:5px"><input type="number" value="${c.wMin}" oninput="updateCard(${c.id}, 'wMin', this.value)"><input type="number" value="${c.wMax}" oninput="updateCard(${c.id}, 'wMax', this.value)"></div></div>
-                            <div style="flex:0.6"><label style="font-size:0.75rem; color:#aaa">Base Crítico (%)</label><input type="number" value="${c.wCritM}" oninput="updateCard(${c.id}, 'wCritM', this.value)" title="Armas como adagas recebem 155~165%"></div>
-                        </div>
-
-                        <select style="grid-column: span 2" onchange="updateCard(${c.id}, 'wAttr', this.value)">
-                            <option value="Força" ${c.wAttr==='Força'?'selected':''}>Escala c/ Força (Espadão, Machado)</option>
-                            <option value="Finesse" ${c.wAttr==='Finesse'?'selected':''}>Escala c/ Finesse (Adaga, Lança, Arco)</option>
-                            <option value="Inteligência" ${c.wAttr==='Inteligência'?'selected':''}>Escala c/ Int (Cajado, Varinha)</option>
-                        </select>
-
-                        <div style="grid-column: span 2; border-top:1px solid rgba(255,255,255,0.05); padding-top:10px; margin-top:5px">
-                            <div class="toggle-row" style="background:transparent; padding:0; border:0; margin-bottom:10px">
-                                <div style="font-size:0.8rem">Acionar Dual-Wield (Requer 2ª Arma)</div>
-                                <label class="switch"><input type="checkbox" ${c.hasOffhand?'checked':''} onchange="updateCard(${c.id}, 'hasOffhand', this.checked)"><span class="slider"></span></label>
-                            </div>
-                            ${c.hasOffhand ? `
-                            <div>
-                                <label style="font-size:0.75rem; color:#aaa">Dano Off-Hand (Apenas 50% é somado ao total nativamente): Min ~ Max</label>
-                                <div style="display:flex; gap:5px"><input type="number" value="${c.offMin}" oninput="updateCard(${c.id}, 'offMin', this.value)"><input type="number" value="${c.offMax}" oninput="updateCard(${c.id}, 'offMax', this.value)"></div>
-                            </div>
-                            ` : ''}
-                        </div>
-                    </div>` : ''}
+                    let cBase = localStorage.getItem('dos2_critbase'); if(cBase !== null) document.getElementById('gCritBase').value = cBase;
+                    let buffs = localStorage.getItem('dos2_buffs'); if(buffs !== null) document.getElementById('gBuffs').value = buffs;
                     
-                    ${c.active ? `<button class="toggle-math-btn" onclick="toggleMath(${c.id})">Rastrear Cálculo Real do Jogo</button><div class="sc-math" id="math_${c.id}">-</div>` : ''}
-                </div>`;
-            });
-            bObj.innerHTML = html;
-            calc();
-        }
+                    let dw = localStorage.getItem('dos2_dw'); 
+                    if(dw !== null) {
+                        document.getElementById('gDW').value = dw;
+                        document.getElementById('lblDw').innerText = dw + '%';
+                    }
 
-        window.updateCard = function(id, field, value) {
-            let c = skillsCombo.find(x => x.id === id);
-            if(c) { 
-                if(field === 'active' || field === 'hasOffhand') c[field] = value;
-                else c[field] = isNaN(value) ? value : Number(value); 
-                if(field==='active' || field==='hasOffhand') renderSkills(); else calc(); 
-            }
-        }
+                    let tHot = localStorage.getItem('dos2_thot'); if(tHot !== null) document.getElementById('tHot').checked = (tHot === '1');
+                    let tGue = localStorage.getItem('dos2_tgue'); if(tGue !== null) document.getElementById('tGue').checked = (tGue === '1');
+                    let tHum = localStorage.getItem('dos2_thum'); if(tHum !== null) document.getElementById('tHum').checked = (tHum === '1');
+                    let tElf = localStorage.getItem('dos2_telf'); if(tElf !== null) document.getElementById('tElf').checked = (tElf === '1');
+                    let tSbg = localStorage.getItem('dos2_tsbg'); if(tSbg !== null) document.getElementById('tSbg').checked = (tSbg === '1');
+                    let tHg = localStorage.getItem('dos2_thg'); if(tHg !== null) document.getElementById('tHg').checked = (tHg === '1');
 
-        // --- THE DOS2 MATHEMATICAL ENGINE CORE ---
-        function calc() {
-            let lvl = Number(document.getElementById('gLv').value) || 1; if(lvl<1)lvl=1; if(lvl>25)lvl=25;
-            let attrS = Number(document.getElementById('gStr').value) || 10;
-            let attrF = Number(document.getElementById('gFin').value) || 10;
-            let attrI = Number(document.getElementById('gInt').value) || 10;
+                    let savedCombo = localStorage.getItem('dos2_board');
+                    if(savedCombo) {
+                        this.skillsCombo = JSON.parse(savedCombo);
+                        if(this.skillsCombo.length > 0) {
+                            this.nextSkId = Math.max(...this.skillsCombo.map(s => s.id)) + 1;
+                        }
+                    }
+                } catch(e) {}
+                this.renderSkills();
+            },
 
-            let sWrf = (Number(document.getElementById('gWarfare').value)||0)*0.05;
-            let sPyr = (Number(document.getElementById('gPyro').value)||0)*0.05;
-            let sGeo = (Number(document.getElementById('gGeo').value)||0)*0.05;
-            let sHyd = (Number(document.getElementById('gHydro').value)||0)*0.05;
-            let sAer = (Number(document.getElementById('gAero').value)||0)*0.05;
-            let sSumm= (Number(document.getElementById('gSummon').value)||0)*0.05;
-            let wSkp = (Number(document.getElementById('gWep').value)||0)*0.05;
+            openWikiModal: function() {
+                try {
+                    let sel = document.getElementById('selSchool');
+                    sel.innerHTML = '<option value="" disabled selected>Escolha a Categoria e Escola</option>';
+                    if(!window.CentralComboList || Object.keys(window.CentralComboList).length === 0) {
+                        alert("O Banco de Dados XML não foi populado corretamente. Verifique se o calculadora.js está funcional.");
+                        return;
+                    }
+                    for(let k in window.CentralComboList) {
+                        if(window.CentralComboList[k].length > 0) sel.innerHTML += `<option value="${k}">${k}</option>`;
+                    }
+                    document.getElementById('selSkill').innerHTML = '<option value="" disabled selected>Escolha a Habilidade/Magia</option>';
+                    document.getElementById('selSkill').value = "";
+                    document.getElementById('wikiError').style.display = 'none';
+                    document.getElementById('wikiModal').style.display='flex';
+                } catch(e) { alert("Erro ao abrir Buscador: " + e.message); }
+            },
             
-            let isHum = document.getElementById('tHum').checked, isElf = document.getElementById('tElf').checked, isSbg = document.getElementById('tSbg').checked;
-            let isHg = document.getElementById('tHg').checked, isHot = document.getElementById('tHot').checked, isGue = document.getElementById('tGue').checked;
+            populateSkills: function() {
+                let sc = document.getElementById('selSchool').value;
+                let selSk = document.getElementById('selSkill');
+                selSk.innerHTML = '<option value="" disabled selected>Escolha a Habilidade/Magia</option>';
+                if(window.CentralComboList[sc]) {
+                    window.CentralComboList[sc].forEach((sk, i) => selSk.innerHTML += `<option value="${i}">${sk.name}</option>`);
+                }
+            },
             
-            let scnd = (Number(document.getElementById('gScndrl').value)||0)*0.05, hnt = (Number(document.getElementById('gHunts').value)||0)*0.05;
-            let dw = (Number(document.getElementById('gDW').value)||0)/100, ms = (Number(document.getElementById('gBuffs').value)||0)/100;
+            pushSkillFromWiki: function() {
+                let sc = document.getElementById('selSchool').value;
+                let ki = document.getElementById('selSkill').value;
+                if(!sc || !ki) {
+                    document.getElementById('wikiError').style.display = 'block';
+                    document.getElementById('wikiError').innerText = "Escolha a Categoria e a Habilidade!";
+                    return;
+                }
+                try {
+                    let s = window.CentralComboList[sc][ki];
+                    this.skillsCombo.push({
+                        id: this.nextSkId++, name: s.name, origin: s.origin || "Magia", type: s.type || "phys", mult: s.mult || 100,
+                        active: true, ignoreAttr: s.ignoreAttr || false,
+                        wMin: 50, wMax: 60, wAttr: s.attr || "Dinâmico", wCritM: 150, 
+                        hasOffhand: false, offMin: 15, offMax: 20, attr: s.attr || "Dinâmico",
+                        ap: s.ap || 0, esc: s.esc || ""
+                    });
+                    document.getElementById('wikiModal').style.display='none';
+                    this.renderSkills(); 
+                } catch(e) {
+                    document.getElementById('wikiError').style.display = 'block';
+                    document.getElementById('wikiError').innerText = "Erro ao processar habilidade: " + e.message;
+                }
+            },
 
-            let cCrit = (Number(document.getElementById('gCritBase').value)||0) + (isHum ? 5 : 0) + (isHot ? 10 : 0); if(cCrit>100) cCrit=100; if(cCrit<0) cCrit=0;
-            let globCrtAdd = scnd + (isHum ? 0.10 : 0);
-            let hgVal = isHg ? (0.2 + hnt) : 0;
-            
-            let tMisc = ms + dw + (isElf ? 0.10:0) + (isGue ? 0.40:0);
+            rmSkill: function(id) { 
+                this.skillsCombo = this.skillsCombo.filter(c => c.id !== id); 
+                this.renderSkills(); 
+            },
 
-            let G_NM=0, G_NMX=0, G_CM=0, G_CMX=0, G_EM=0, G_EMX=0;
-            let logExtrato = '<strong style="color:var(--gold-dim); display:block; margin-bottom:8px; text-transform:uppercase;">Extrato do Combate (Dano Esperado):</strong>';
-            let contAtivos = 0;
-            let Total_AP = 0;
+            toggleMath: function(id) {
+                let dom = document.getElementById('math_'+id);
+                if(dom) dom.style.display = dom.style.display === 'block' ? 'none' : 'block';
+            },
 
-            skillsCombo.forEach(c => {
-                let domM = document.getElementById('math_'+c.id);
-                if(!c.active) { if(domM) domM.innerHTML = ''; return; }
-                
-                Total_AP += c.ap || 0;
+            updateCard: function(id, field, value) {
+                let c = this.skillsCombo.find(x => x.id === id);
+                if(c) { 
+                    if(field === 'active' || field === 'hasOffhand') c[field] = value;
+                    else c[field] = isNaN(value) ? value : Number(value); 
+                    if(field==='active' || field==='hasOffhand') this.renderSkills(); else this.calc(); 
+                }
+            },
 
-                let pVars = {
-                    lvl: lvl,
-                    str: attrS,
-                    fin: attrF,
-                    int: attrI,
-                    wpMi: c.wMin,
-                    wpMa: c.wMax,
-                    offMin: c.hasOffhand ? c.offMin : 0,
-                    offMax: c.hasOffhand ? c.offMax : 0,
-                    sWrf: sWrf, sPyr: sPyr, sGeo: sGeo, sHyd: sHyd, sAer: sAer, sSum: sSumm,
-                    wSkp: wSkp,
-                    tMisc: tMisc 
-                };
-
-                let resMaster = window.CalculateFextralifeFormula(c, pVars);
-                
-                let sNorm = 1 + hgVal;
-                let actualCritMultScale = 0;
-                if(c.origin === 'Arma') {
-                    let crW = (c.wCritM / 100); 
-                    actualCritMultScale = crW + globCrtAdd; 
-                } else {
-                    actualCritMultScale = 1.5 + globCrtAdd;
+            renderSkills: function() {
+                let html = '';
+                let bObj = document.getElementById('board');
+                if(this.skillsCombo.length === 0) {
+                    bObj.innerHTML = `<div class="empty-placeholder" id="skillEmpty">Sua Ordem dos Turnos de Combo está vazia. Inicie buscando na Wiki.</div>`;
+                    this.calc();
+                    return;
                 }
                 
-                let sCrit = 1 + hgVal + (actualCritMultScale - 1);
+                this.skillsCombo.forEach(c => {
+                    let originStr = (c.origin || "").toLowerCase();
+                    let tag = c.origin === 'Arma' ? 'Golpe c/ Arma' : (c.origin === 'Aura' ? 'Aura Em Arma' : (c.origin==='Poly'?'Polimorfia':'Encantamento/Magia'));
+                    if(c.origin==='Summon') tag = 'Invocação/Summon';
+                    if(c.ignoreAttr) tag = 'Magia Pura/Racial';
+
+                    html += `
+                    <div class="skill-card type-${originStr} ${c.ignoreAttr ? 'type-racials' : ''} ${c.active ? '' : 'disabled'}" id="card_${c.id}">
+                        <div class="sc-header">
+                            <div class="sc-title">
+                                ${c.name} <span class="sc-tag">${tag}</span>
+                                <label class="switch" title="Ativar/Inativar">
+                                    <input type="checkbox" ${c.active?'checked':''} onchange="app.updateCard(${c.id}, 'active', this.checked)">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <button class="btn-rm" onclick="app.rmSkill(${c.id})">Excluir</button>
+                        </div>
+
+                        ${c.active ? `
+                        <div class="sc-inputs">
+                            <div class="input-row" style="flex-direction:column; align-items:flex-start; width:100%; border:0; padding:0; background:none">
+                                <label style="width:100%">Multiplicador Extração (%)</label>
+                                <input style="width:100%" type="number" value="${c.mult}" oninput="app.updateCard(${c.id}, 'mult', this.value)">
+                            </div>
+                            <div class="input-row" style="flex-direction:column; align-items:flex-start; width:100%; border:0; padding:0; background:none">
+                                <label style="width:100%">Escola Processada</label>
+                                <select style="width:100%" onchange="app.updateCard(${c.id}, 'type', this.value)">
+                                    <option value="Físico" ${c.type==='Físico'||c.type==='phys'?'selected':''}>Físico</option>
+                                    <option value="Fogo" ${c.type==='Fogo'?'selected':''}>Fogo</option>
+                                    <option value="Água" ${c.type==='Água'?'selected':''}>Água</option>
+                                    <option value="Terra" ${c.type==='Terra'?'selected':''}>Terra / Veneno</option>
+                                    <option value="Ar" ${c.type==='Ar'?'selected':''}>Ar</option>
+                                    <option value="Perfurante" ${c.type==='Perfurante'||c.type==='pierce'?'selected':''}>Perfurante</option>
+                                    <option value="Mágico" ${c.type==='marmor'?'selected':''}>Dano Mágico Puro</option>
+                                </select>
+                            </div>
+                        </div>` : '<div style="color:#aaa; font-style:italic; margin-bottom:10px">Golpe silenciado.</div>'}
+
+                        ${(c.origin === 'Arma' && c.active) ? `
+                        <div class="sc-inputs" style="background:rgba(164, 42, 42, 0.1); border: 1px dashed var(--red)">
+                            <div style="grid-column: span 2; font-size: 0.8rem; color:var(--text-main); margin-bottom:-5px"><strong>Equipamento Físico Instalado</strong></div>
+                            
+                            <div style="grid-column: span 2; display:flex; gap:10px">
+                                <div style="flex:1"><label style="font-size:0.75rem; color:#aaa">Arma Primária (Min ~ Max)</label><div style="display:flex; gap:5px"><input type="number" value="${c.wMin}" oninput="app.updateCard(${c.id}, 'wMin', this.value)"><input type="number" value="${c.wMax}" oninput="app.updateCard(${c.id}, 'wMax', this.value)"></div></div>
+                                <div style="flex:0.6"><label style="font-size:0.75rem; color:#aaa">Crítico (%)</label><input type="number" value="${c.wCritM}" oninput="app.updateCard(${c.id}, 'wCritM', this.value)"></div>
+                            </div>
+
+                            <select style="grid-column: span 2" onchange="app.updateCard(${c.id}, 'wAttr', this.value)">
+                                <option value="Força" ${c.wAttr==='Força'?'selected':''}>Escala c/ Força</option>
+                                <option value="Finesse" ${c.wAttr==='Finesse'?'selected':''}>Escala c/ Finesse (Adaga, Arco)</option>
+                                <option value="Inteligência" ${c.wAttr==='Inteligência'?'selected':''}>Escala c/ Int (Cajado)</option>
+                            </select>
+
+                            <div style="grid-column: span 2; border-top:1px solid rgba(255,255,255,0.05); padding-top:10px; margin-top:5px">
+                                <div class="toggle-row" style="background:transparent; padding:0; border:0; margin-bottom:10px">
+                                    <div style="font-size:0.8rem">Acionar Dual-Wield (Adiciona 50% da off-hand)</div>
+                                    <label class="switch"><input type="checkbox" ${c.hasOffhand?'checked':''} onchange="app.updateCard(${c.id}, 'hasOffhand', this.checked)"><span class="slider"></span></label>
+                                </div>
+                                ${c.hasOffhand ? `
+                                <div>
+                                    <label style="font-size:0.75rem; color:#aaa">Dano Off-Hand (Min ~ Max)</label>
+                                    <div style="display:flex; gap:5px"><input type="number" value="${c.offMin}" oninput="app.updateCard(${c.id}, 'offMin', this.value)"><input type="number" value="${c.offMax}" oninput="app.updateCard(${c.id}, 'offMax', this.value)"></div>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>` : ''}
+                        
+                        ${c.active ? `<button class="toggle-math-btn" onclick="app.toggleMath(${c.id})">Visualizar Estratificação de Danos</button><div class="sc-math" id="math_${c.id}">-</div>` : ''}
+                    </div>`;
+                });
+                bObj.innerHTML = html;
+                this.calc();
+            },
+
+            calc: function() {
+                let lvl = Number(document.getElementById('gLv').value) || 1; if(lvl<1)lvl=1; if(lvl>25)lvl=25;
+                let attrS = Number(document.getElementById('gStr').value) || 10;
+                let attrF = Number(document.getElementById('gFin').value) || 10;
+                let attrI = Number(document.getElementById('gInt').value) || 10;
+
+                let sWrf = (Number(document.getElementById('gWarfare').value)||0)*0.05;
+                let sPyr = (Number(document.getElementById('gPyro').value)||0)*0.05;
+                let sGeo = (Number(document.getElementById('gGeo').value)||0)*0.05;
+                let sHyd = (Number(document.getElementById('gHydro').value)||0)*0.05;
+                let sAer = (Number(document.getElementById('gAero').value)||0)*0.05;
+                let sSumm= (Number(document.getElementById('gSummon').value)||0)*0.05;
+                let wSkp = (Number(document.getElementById('gWep').value)||0)*0.05;
                 
-                let log = resMaster.logicLog;
-                let ecCh = cCrit;
-                if(c.origin==='Magia' || c.origin==='Aura' || c.origin==='Poly' || c.origin==='Summon' || c.ignoreAttr) {
-                    if(!isSbg) {
-                        ecCh = 0; sCrit = sNorm;
-                        log += `\nCrítico: Anulado (Requer 'Magia Selvagem').\n`;
-                    } else log += `\nCrítico: Ativo via Magia Selvagem (Poder: ${(actualCritMultScale*100).toFixed(0)}%).\n`;
-                } else {
-                    log += `\nCrítico Padrão Físico: \n   <span style="color:var(--red-glow)">x ${actualCritMultScale.toFixed(2)}</span>\n`
+                let isHum = document.getElementById('tHum').checked, isElf = document.getElementById('tElf').checked, isSbg = document.getElementById('tSbg').checked;
+                let isHg = document.getElementById('tHg').checked, isHot = document.getElementById('tHot').checked, isGue = document.getElementById('tGue').checked;
+                
+                let scnd = (Number(document.getElementById('gScndrl').value)||0)*0.05, hnt = (Number(document.getElementById('gHunts').value)||0)*0.05;
+                let dw = (Number(document.getElementById('gDW').value)||0)/100, ms = (Number(document.getElementById('gBuffs').value)||0)/100;
+
+                let cCrit = (Number(document.getElementById('gCritBase').value)||0) + (isHum ? 5 : 0) + (isHot ? 10 : 0); if(cCrit>100) cCrit=100; if(cCrit<0) cCrit=0;
+                let globCrtAdd = scnd + (isHum ? 0.10 : 0);
+                let hgVal = isHg ? (0.2 + hnt) : 0;
+                
+                let tMisc = ms + dw + (isElf ? 0.10:0) + (isGue ? 0.40:0);
+
+                let G_NM=0, G_NMX=0, G_CM=0, G_CMX=0, G_EM=0, G_EMX=0;
+                let logExtrato = '<strong style="color:var(--gold-dim); display:block; margin-bottom:8px; text-transform:uppercase;">Extrato do Combate (Dano Esperado):</strong>';
+                let contAtivos = 0;
+                let Total_AP = 0;
+
+                this.skillsCombo.forEach(c => {
+                    let domM = document.getElementById('math_'+c.id);
+                    if(!c.active) { if(domM) domM.innerHTML = ''; return; }
+                    
+                    Total_AP += c.ap || 0;
+
+                    let pVars = {
+                        lvl: lvl, str: attrS, fin: attrF, int: attrI,
+                        wpMi: c.wMin, wpMa: c.wMax,
+                        offMin: c.hasOffhand ? c.offMin : 0, offMax: c.hasOffhand ? c.offMax : 0,
+                        sWrf: sWrf, sPyr: sPyr, sGeo: sGeo, sHyd: sHyd, sAer: sAer, sSum: sSumm,
+                        wSkp: wSkp, tMisc: tMisc 
+                    };
+
+                    let resMaster = {mi: 0, ma: 0, logicLog: "Erro de Calculo."};
+                    if (window.CalculateFextralifeFormula) {
+                        resMaster = window.CalculateFextralifeFormula(c, pVars);
+                    }
+                    
+                    let sNorm = 1 + hgVal;
+                    let actualCritMultScale = 0;
+                    if(c.origin === 'Arma') {
+                        let crW = (c.wCritM / 100); 
+                        actualCritMultScale = crW + globCrtAdd; 
+                    } else {
+                        actualCritMultScale = 1.5 + globCrtAdd;
+                    }
+                    
+                    let sCrit = 1 + hgVal + (actualCritMultScale - 1);
+                    
+                    let log = resMaster.logicLog || "";
+                    let ecCh = cCrit;
+                    if(c.origin==='Magia' || c.origin==='Aura' || c.origin==='Poly' || c.origin==='Summon' || c.ignoreAttr) {
+                        if(!isSbg) {
+                            ecCh = 0; sCrit = sNorm;
+                            log += `\nCrítico: Anulado (Requer 'Magia Selvagem').\n`;
+                        } else log += `\nCrítico: Ativo via Magia Selvagem (Poder: ${(actualCritMultScale*100).toFixed(0)}%).\n`;
+                    } else {
+                        log += `\nCrítico Padrão Físico: \n   <span style="color:var(--red-glow)">x ${actualCritMultScale.toFixed(2)}</span>\n`
+                    }
+
+                    if(hgVal > 0) log += `Terreno Elevado Em Acerto Normal: <span class="math-hilight">x ${sNorm.toFixed(2)}</span>\n`;
+
+                    let formBruto1 = resMaster.mi * sNorm;
+                    let formBruto2 = resMaster.ma * sNorm;
+                    
+                    let formCrit1 = resMaster.mi * sCrit;
+                    let formCrit2 = resMaster.ma * sCrit;
+
+                    let EMi = formBruto1 * (1-ecCh/100) + formCrit1 * (ecCh/100);
+                    let EMa = formBruto2 * (1-ecCh/100) + formCrit2 * (ecCh/100);
+
+                    log += `\n<span style="color:#aaa">=========================================</span>\n`;
+                    log += `>>> DANO ESTIMADO (Fórmula Fextralife Oficial): \n>>> <strong class="math-res">${Math.floor(EMi)} ~ ${Math.floor(EMa)}</strong>`;
+
+                    if(domM) domM.innerHTML = log;
+                    
+                    G_NM += formBruto1; G_NMX += formBruto2;
+                    G_CM += formCrit1; G_CMX += formCrit2;
+                    G_EM += EMi; G_EMX += EMa;
+
+                    let colorH = c.type==='Físico' || c.type==='phys' || c.type==='Perfurante' || c.type==='pierce' ? '#e8dcc7' : (c.type==='Fogo'?'var(--red-glow)':'var(--magic-glow)');
+                    logExtrato += `<div style="display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.05); padding: 4px 0;">
+                                      <span><span style="color:${colorH}">■</span> ${c.name}</span>
+                                      <span style="font-family:monospace; font-weight:bold; color:white">${Math.floor(EMi)} ~ ${Math.floor(EMa)}</span>
+                                   </div>`;
+                    contAtivos++;
+                });
+
+                if(contAtivos === 0) logExtrato = "Nenhuma habilidade no Combo.";
+                else {
+                    logExtrato += `<div style="display:flex; justify-content:space-between; margin-top:8px; font-weight:bold; padding-top:4px; border-top: 1px solid rgba(212,175,55,0.4); color:var(--gold)">
+                                      <span>T O T A L :</span>
+                                      <span>${Math.floor(G_EM)} ~ ${Math.floor(G_EMX)}</span>
+                                   </div>
+                                   <div style="text-align: right; margin-top: 4px; font-size: 0.85rem; color: #aaa;">
+                                      <span style="color:var(--gold)">⬡ ${Total_AP} AP Necessários</span>
+                                   </div>`;
                 }
-
-                if(hgVal > 0) log += `Terreno Elevado Em Acerto Normal: <span class="math-hilight">x ${sNorm.toFixed(2)}</span>\n`;
-
-                let formBruto1 = resMaster.mi * sNorm;
-                let formBruto2 = resMaster.ma * sNorm;
                 
-                let formCrit1 = resMaster.mi * sCrit;
-                let formCrit2 = resMaster.ma * sCrit;
+                let domComposicao = document.getElementById('resComposicao');
+                if(domComposicao) domComposicao.innerHTML = logExtrato;
 
-                let EMi = formBruto1 * (1-ecCh/100) + formCrit1 * (ecCh/100);
-                let EMa = formBruto2 * (1-ecCh/100) + formCrit2 * (ecCh/100);
+                document.getElementById('resNorm').innerText = `${Math.floor(G_NM).toLocaleString('pt-BR')} - ${Math.floor(G_NMX).toLocaleString('pt-BR')}`;
+                document.getElementById('resCrit').innerText = `${Math.floor(G_CM).toLocaleString('pt-BR')} - ${Math.floor(G_CMX).toLocaleString('pt-BR')}`;
+                document.getElementById('resMedio').innerText = `${Math.floor(G_EM).toLocaleString('pt-BR')} - ${Math.floor(G_EMX).toLocaleString('pt-BR')}`;
 
-                log += `\n<span style="color:#aaa">=========================================</span>\n`;
-                log += `>>> DANO ESTIMADO (Fórmula Fextralife Oficial): \n>>> <strong class="math-res">${Math.floor(EMi)} ~ ${Math.floor(EMa)}</strong>`;
+                try {
+                    localStorage.setItem('dos2_lvl', document.getElementById('gLv').value);
+                    localStorage.setItem('dos2_str', document.getElementById('gStr').value);
+                    localStorage.setItem('dos2_fin', document.getElementById('gFin').value);
+                    localStorage.setItem('dos2_int', document.getElementById('gInt').value);
+                    localStorage.setItem('dos2_war', document.getElementById('gWarfare').value);
+                    localStorage.setItem('dos2_pyr', document.getElementById('gPyro').value);
+                    localStorage.setItem('dos2_geo', document.getElementById('gGeo').value);
+                    localStorage.setItem('dos2_hyd', document.getElementById('gHydro').value);
+                    localStorage.setItem('dos2_aer', document.getElementById('gAero').value);
+                    localStorage.setItem('dos2_sum', document.getElementById('gSummon').value);
+                    localStorage.setItem('dos2_scn', document.getElementById('gScndrl').value);
+                    localStorage.setItem('dos2_hnt', document.getElementById('gHunts').value);
+                    localStorage.setItem('dos2_wep', document.getElementById('gWep').value);
+                    
+                    localStorage.setItem('dos2_critbase', document.getElementById('gCritBase').value);
+                    localStorage.setItem('dos2_buffs', document.getElementById('gBuffs').value);
+                    localStorage.setItem('dos2_dw', document.getElementById('gDW').value);
 
-                if(domM) domM.innerHTML = log;
-                
-                G_NM += formBruto1; G_NMX += formBruto2;
-                G_CM += formCrit1; G_CMX += formCrit2;
-                G_EM += EMi; G_EMX += EMa;
+                    localStorage.setItem('dos2_thot', document.getElementById('tHot').checked ? '1' : '0');
+                    localStorage.setItem('dos2_tgue', document.getElementById('tGue').checked ? '1' : '0');
+                    localStorage.setItem('dos2_thum', document.getElementById('tHum').checked ? '1' : '0');
+                    localStorage.setItem('dos2_telf', document.getElementById('tElf').checked ? '1' : '0');
+                    localStorage.setItem('dos2_tsbg', document.getElementById('tSbg').checked ? '1' : '0');
+                    localStorage.setItem('dos2_thg', document.getElementById('tHg').checked ? '1' : '0');
 
-                let colorH = c.type==='Físico' || c.type==='Perfurante' ? '#e8dcc7' : (c.type==='Fogo'?'var(--red-glow)':'var(--magic-glow)');
-                logExtrato += `<div style="display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.05); padding: 4px 0;">
-                                  <span><span style="color:${colorH}">■</span> ${c.name}</span>
-                                  <span style="font-family:monospace; font-weight:bold; color:white">${Math.floor(EMi)} ~ ${Math.floor(EMa)}</span>
-                               </div>`;
-                contAtivos++;
-            });
-
-            if(contAtivos === 0) logExtrato = "Nenhuma habilidade no Combo.";
-            else {
-                logExtrato += `<div style="display:flex; justify-content:space-between; margin-top:8px; font-weight:bold; padding-top:4px; border-top: 1px solid rgba(212,175,55,0.4); color:var(--gold)">
-                                  <span>T O T A L :</span>
-                                  <span>${Math.floor(G_EM)} ~ ${Math.floor(G_EMX)}</span>
-                               </div>
-                               <div style="text-align: right; margin-top: 4px; font-size: 0.85rem; color: #aaa;">
-                                  <span style="color:var(--gold)">⬡ ${Total_AP} AP Necessários</span>
-                               </div>`;
+                    localStorage.setItem('dos2_board', JSON.stringify(this.skillsCombo));
+                } catch(e) {}
             }
+        };
+
+        // Attach listeners securely
+        document.addEventListener('DOMContentLoaded', () => {
+            app.initMath();
             
-            let domComposicao = document.getElementById('resComposicao');
-            if(domComposicao) domComposicao.innerHTML = logExtrato;
-
-            document.getElementById('resNorm').innerText = `${Math.floor(G_NM).toLocaleString('pt-BR')} - ${Math.floor(G_NMX).toLocaleString('pt-BR')}`;
-            document.getElementById('resCrit').innerText = `${Math.floor(G_CM).toLocaleString('pt-BR')} - ${Math.floor(G_CMX).toLocaleString('pt-BR')}`;
-            document.getElementById('resMedio').innerText = `${Math.floor(G_EM).toLocaleString('pt-BR')} - ${Math.floor(G_EMX).toLocaleString('pt-BR')}`;
-
-            // Sincronização Telepática p/ O Grimório
-            try {
-                localStorage.setItem('dos2_lvl', document.getElementById('gLv').value);
-                localStorage.setItem('dos2_str', document.getElementById('gStr').value);
-                localStorage.setItem('dos2_fin', document.getElementById('gFin').value);
-                localStorage.setItem('dos2_int', document.getElementById('gInt').value);
-                localStorage.setItem('dos2_war', document.getElementById('gWarfare').value);
-                localStorage.setItem('dos2_pyr', document.getElementById('gPyro').value);
-                localStorage.setItem('dos2_geo', document.getElementById('gGeo').value);
-                localStorage.setItem('dos2_hyd', document.getElementById('gHydro').value);
-                localStorage.setItem('dos2_aer', document.getElementById('gAero').value);
-                localStorage.setItem('dos2_sum', document.getElementById('gSummon').value);
-                localStorage.setItem('dos2_scn', document.getElementById('gScndrl').value);
-                localStorage.setItem('dos2_hnt', document.getElementById('gHunts').value);
-                localStorage.setItem('dos2_wep', document.getElementById('gWep').value);
-                localStorage.setItem('dos2_buf', ms);
-                localStorage.setItem('dos2_dw', dw);
-                localStorage.setItem('dos2_elf', isElf?'1':'0');
-                localStorage.setItem('dos2_gue', isGue?'1':'0');
-            } catch(e) {}
-        }
+            document.getElementById('btnBuscador').addEventListener('click', () => {
+                app.openWikiModal();
+            });
+            
+            document.getElementById('selSchool').addEventListener('change', () => {
+                app.populateSkills();
+            });
+            
+            document.getElementById('btnConfirmarModal').addEventListener('click', () => {
+                app.pushSkillFromWiki();
+            });
+            
+            document.getElementById('btnAbortarModal').addEventListener('click', () => {
+                document.getElementById('wikiModal').style.display = 'none';
+            });
+        });
     </script>
 </body>
 </html>

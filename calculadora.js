@@ -64,7 +64,11 @@ function extractSkillData(skNode) {
 
 // Inicializamos logo na carga os DBs
 if(typeof BANCO_XML_RAW !== "undefined") {
-    initDatabase();
+    try {
+        initDatabase();
+    } catch(e) {
+        alert("Erro fatal ao processar Banco XML: " + e.message);
+    }
 } else {
     console.warn("banco_xml.js não carregado antes de calculadora.js");
 }
@@ -111,11 +115,11 @@ window.CalculateFextralifeFormula = function(skill, stats) {
     if(skill.origin === 'Summon') {
         mSchool = stats.sSum || 0; nSchool = "Summoning Ability";
     } else {
-        if(skill.type==='phys'||skill.type==='pierce'){mSchool=stats.sWrf||0; nSchool="Warfare";}
-        else if(skill.esc==='Fogo'){mSchool=stats.sPyr||0; nSchool="Pyrokinetic";}
-        else if(skill.esc==='Veneno'||skill.esc==='Terra'){mSchool=stats.sGeo||0; nSchool="Geomancer";}
-        else if(skill.esc==='Água'){mSchool=stats.sHyd||0; nSchool="Hydrosophist";}
-        else if(skill.esc==='Ar'){mSchool=stats.sAer||0; nSchool="Aerotheurge";}
+        if(skill.type==='phys'||skill.type==='pierce'||skill.type==='Físico'||skill.type==='Perfurante'){mSchool=stats.sWrf||0; nSchool="Warfare";}
+        else if(skill.esc==='Fogo'||skill.type==='Fogo'){mSchool=stats.sPyr||0; nSchool="Pyrokinetic";}
+        else if(skill.esc==='Veneno'||skill.esc==='Terra'||skill.type==='Veneno'||skill.type==='Terra'){mSchool=stats.sGeo||0; nSchool="Geomancer";}
+        else if(skill.esc==='Água'||skill.type==='Água'){mSchool=stats.sHyd||0; nSchool="Hydrosophist";}
+        else if(skill.esc==='Ar'||skill.type==='Ar'){mSchool=stats.sAer||0; nSchool="Aerotheurge";}
     }
     logicLog += `Escala ${nSchool}: x ${(1+mSchool).toFixed(2)}\n`;
 
