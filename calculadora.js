@@ -9,7 +9,7 @@ window.CentralComboList = {};
 
 function initDatabase() {
     const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(BANCO_XML_RAW, "text/xml");
+    const xmlDoc = parser.parseFromString(window.BANCO_XML_RAW, "text/xml");
     
     const schools = xmlDoc.getElementsByTagName("School");
     window.CentralDatabase = {};
@@ -63,7 +63,7 @@ function extractSkillData(skNode) {
 }
 
 // Inicializamos logo na carga os DBs
-if(typeof BANCO_XML_RAW !== "undefined") {
+if(typeof window.BANCO_XML_RAW !== "undefined") {
     try {
         initDatabase();
     } catch(e) {
@@ -126,30 +126,40 @@ window.CalculateFextralifeFormula = function(skill, stats) {
     // STEP 3: ADITIVOS PRINCIPAIS
     let addV = 1; let tM = stats.tMisc || 0;
     
-    if(skill.origin === 'Arma') {
-        let attrV = 10;
-        if(skill.attr==='Força') attrV = stats.str; 
-        if(skill.attr==='Finesse') attrV = stats.fin; 
-        if(skill.attr==='Intel') attrV = stats.int; 
-        if(skill.attr==='Dinâmico' || !skill.attr) attrV = Math.max(stats.str||10, Math.max(stats.fin||10, stats.int||10));
+    let scalingAttrType = skill.origin === 'Arma' ? (skill.wAttr || skill.attr) : skill.attr;
+    let attrVal = 10;
+    let attrNameLog = "Padrão";
 
-        let ptB = Math.max(0, (attrV-10)*0.05);
-        addV = 1 + ptB + (stats.wSkp||0) + tM;
-        logicLog += `Bônus Agrupados [Arma]: (Atributos + Skill + Talentos) x ${addV.toFixed(2)}\n`;
+    if (scalingAttrType === 'Força') { attrVal = stats.str || 10; attrNameLog = "Força"; }
+    else if (scalingAttrType === 'Finesse') { attrVal = stats.fin || 10; attrNameLog = "Finesse"; }
+    else if (scalingAttrType === 'Inteligência' || scalingAttrType === 'Intel') { attrVal = stats.int || 10; attrNameLog = "Inteligência"; }
+    else { 
+        if (skill.origin === 'Arma') {
+            attrVal = Math.max(stats.str||10, Math.max(stats.fin||10, stats.int||10)); 
+            attrNameLog = "Dinâmico";
+        } else if (skill.origin === 'Poly') {
+            attrVal = stats.str||10; 
+            attrNameLog = "Força [Fallback Poly]";
+        } else {
+            attrVal = stats.int||10; 
+            attrNameLog = "Inteligência [Fallback Magia]";
+        }
+    }
+
+    let attrBonus = Math.max(0, (attrVal - 10) * 0.05);
+
+    if(skill.origin === 'Arma') {
+        addV = 1 + attrBonus + (stats.wSkp||0) + tM;
+        logicLog += `Bônus Agrupados [Arma]: (Atr(${attrNameLog}) + Skill + Talentos) x ${addV.toFixed(2)}\n`;
     } else if(skill.origin === 'Summon') {
         addV = 1 + tM; 
         logicLog += `Bônus Agrupados (Summons excluem atributos): x ${addV.toFixed(2)}\n`;
-    } else if(skill.origin === 'Poly') {
-        let polySt = Math.max(0, ((stats.str||10)-10)*0.05);
-        addV = (1 + polySt) * (1 + tM); 
-        logicLog += `Bônus Agrupados [Poly Usa Força Mágica]: x ${addV.toFixed(2)}\n`;
     } else if(skill.ignoreAttr) {
         addV = 1 * (1 + tM);
         logicLog += `Bônus Agrupados [Racial Ignora Atributos Mestre]: x ${addV.toFixed(2)}\n`;
     } else {
-        let iB = Math.max(0, ((stats.int||10)-10)*0.05);
-        addV = (1 + iB) * (1 + tM);
-        logicLog += `Bônus Agrupados Magia [Padrão Int]: x ${addV.toFixed(2)}\n`;
+        addV = (1 + attrBonus) * (1 + tM);
+        logicLog += `Bônus Agrupados [Magia/Especialização Atr(${attrNameLog})]: x ${addV.toFixed(2)}\n`;
     }
 
     // APLICAR AS MULTIPLICAÇÕES FINAIS (Bruto puro, sem calcular crítico e elevamento terreno AINDA - Que é a cargo da Calculadora Combo)

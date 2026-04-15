@@ -1,4 +1,4 @@
-const BANCO_XML_RAW = `<?xml version="1.0" encoding="UTF-8"?>
+window.BANCO_XML_RAW = `<?xml version="1.0" encoding="UTF-8"?>
 <Database>
     <School name="Origens de Arma">
         <Skill id="A1" name="Ataque Básico (Arma)" ap="2" cd="0" type="phys" mult="100" origin="Arma" attr="Dinâmico" canCombo="true">
